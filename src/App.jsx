@@ -3,8 +3,8 @@ import {useDispatch} from 'react-redux'//react-redux is the merger ie. when we n
 import authService from './appwrite/auth'
 import './App.css'
 import {login, logout} from './store/authSlice'
-import Footer from './components/footer/footer'
-import  Header from './components/header/header'
+import Footer from './components/footer/Footer'
+import  Header from './components/header/Header'
 import { Outlet } from 'react-router-dom'
 import { pingAppwrite } from './appwrite/client'
 //we also need to use Dispatch as well in order to do something like getting the current user as we're changing the state
