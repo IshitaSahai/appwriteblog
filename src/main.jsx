@@ -14,7 +14,6 @@ import EditPost from './pages/EditPost.jsx'
 import Post from './pages/Post.jsx'
 import AllPosts from './pages/AllPosts.jsx'
 import {RouterProvider} from 'react-router-dom'
-import { Client } from "appwrite";
 
 const router=createBrowserRouter([
   {
@@ -76,14 +75,7 @@ const router=createBrowserRouter([
 },
 ])
 
-const client = new Client()
-  .setEndpoint(import.meta.env.VITE_APPWRITE_ENDPOINT)
-  .setProject(import.meta.env.VITE_APPWRITE_PROJECT_ID);
 
-client.ping()
-  .then((res) => console.log("Ping success:", res))
-  .catch((err) => console.log("Ping error:", err));
-  
 createRoot(document.getElementById('root')).render(//instead of App we'll use RouterProvider in main.jsx and take everything from there:-
   < StrictMode>
   <Provider store={store}>
